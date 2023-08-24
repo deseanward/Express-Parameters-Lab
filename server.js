@@ -13,6 +13,11 @@ app.get('/greeting/:name', (req, res) => {
     res.send(`<h1>Hello, ${req.params.name}!</h1>`)
 })
 
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    console.log(req.params)
+    res.send(`Tip is ${req.params.tipPercentage}`)
+})
+
 
 // Listen to the port
 app.listen(port, () => {
